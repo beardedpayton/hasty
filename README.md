@@ -1,4 +1,5 @@
 # hasty
+Lightweight Vue Component Library
 
 ## Project setup
 ```
