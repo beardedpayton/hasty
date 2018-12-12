@@ -11,6 +11,9 @@
         :v-model="currentStep + step" 
         :class="`step${step}`"
         class="step">
+        <slot v-if="currentStep > step">
+          <i class="fa fa-check" aria-hidden="true"></i>
+        </slot>
       </div>
     </div>
   </section>
@@ -70,8 +73,10 @@ export default {
           // increase intialWidth by itself after first step change
           this.widthInPercent = intialWidth + intialWidth
       } else {
-        this.$refs.stepProgressionLine.style = `width: ${this.widthInPercent}%`
-        this.widthInPercent = this.widthInPercent + intialWidth
+        if (currentStep <= this.steps) {
+          this.$refs.stepProgressionLine.style = `width: ${this.widthInPercent}%`
+          this.widthInPercent = this.widthInPercent + intialWidth
+        }
       }
     }
   }
@@ -99,6 +104,7 @@ export default {
   background-color: #1c61b2;
 }
 .step {
+  display: flex;
   justify-content: center;
   align-items: center;
   height: 32px;

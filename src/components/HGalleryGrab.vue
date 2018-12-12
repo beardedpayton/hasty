@@ -1,18 +1,19 @@
 <template>
-  <section
+  <div
     @mousedown="down"
     @mouseleave="leave"
     @mouseup="up"
     @mousemove="move"
     ref="slider"
+    class="hasty-gallery-grab_container"
   >
     <slot />
-  </section>
+  </div>
 </template>
 
 <script>
 export default {
-  name: '',
+  name: 'h-gallery-grab',
   props: {},
   data() {
     return {
@@ -65,5 +66,12 @@ export default {
 </script>
 
 <style scoped>
+.hasty-gallery-grab_container {
+  display: flex;
+  overflow-x: auto;
+}
 
+.hasty-gallery-grab_container:hover {
+  cursor: grab;
+}
 </style>
