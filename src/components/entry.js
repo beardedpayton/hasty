@@ -1,5 +1,4 @@
 import Vue from 'vue'
-import HAlert from './HAlert.vue'
 import HBtn from './HBtn.vue'
 import HCarousel from './HCarousel.vue'
 import HCollapse from './HCollapse.vue'
@@ -11,7 +10,6 @@ import HStepper from './HStepper.vue'
 import HTooltip from './HTooltip.vue'
 
 const Components = {
-  HAlert,
   HBtn,
   HCarousel,
   HCollapse,

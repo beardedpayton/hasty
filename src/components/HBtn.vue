@@ -1,11 +1,10 @@
 <template>
-  
+  <button><slot /></button>
 </template>
 
 <script>
 export default {
-  name: '',
-  props: {}
+  name: 'h-btn'
 }
 </script>
 
