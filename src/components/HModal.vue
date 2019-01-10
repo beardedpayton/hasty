@@ -5,7 +5,7 @@
         <div class="hasty-modal_header">
           <p>{{ title }}</p>
           <p @click="isOpen = false">
-            <i class="fas fa-times-circle"></i>
+            <i class="fas fa-times-circle close"></i>
           </p>
         </div>
         <div class="hasty-modal_content">
@@ -90,6 +90,11 @@ export default {
   background-color: #efeeea;
   height: 50px;
   padding: 0 15px;
+}
+
+.hasty-modal_header .close:hover {
+  cursor: pointer;
+  color: red;
 }
 
 .hasty-modal_content {
